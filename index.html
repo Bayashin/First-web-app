@@ -2,14 +2,16 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>JavaScriptの練習</title>
+        <title>Task Manager</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="todo.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body id="body">
+        <p>Task Management</p>
+        <input id="fil" type="file" accept="image/*" class="fil">
+
         <fieldset>
-            <h2>ToDo</h2>
             <label for="todo">
                 <span>Things:</span>
             </label>
@@ -33,8 +35,71 @@
             <button class="set" id="cancel">リセット</button>
             <button class="set" id="decision">送信</button>
             </fieldset>
-            <div id="list_frame" class="list_frame">
+
+        <div id="list_frame" class="list_frame">
+        </div>
+
+
+        <div name="Modal" id="easyModal1" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>おつかれさま！</h1>
+                    <span id="modalClose" class="modalClose" onclick="modalClose(1)">×</span>
+                </div>
+                <div class="modal-body">
+                    <p>この調子で頑張ろう！！</p>
+                </div>
             </div>
+        </div>
+
+        <div name="Modal" id="easyModal2" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>ナイス！！</h1>
+                    <span id="modalClose" class="modalClose" onclick="modalClose(2)">×</span>
+                </div>
+                <div class="modal-body">
+                    <p>イイネ！ どんどん行こう！</p>
+                </div>
+            </div>
+        </div>
+
+        <div name="Modal" id="easyModal3" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>えらい！</h1>
+                    <span id="modalClose" class="modalClose" onclick="modalClose(3)">×</span>
+                </div>
+                <div class="modal-body">
+                    <p>よく頑張っているね！</p>
+                </div>
+            </div>
+        </div>
+
+        <div name="Modal" id="easyModal4" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>すごい！！🎉</h1>
+                    <span id="modalClose" class="modalClose" onclick="modalClose(4)">×</span>
+                </div>
+                <div class="modal-body">
+                    <p>一旦休憩でもとってみる？</p>
+                </div>
+            </div>
+        </div>
+
+        <div name="Modal" id="easyModal5" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>🎉 素晴らしい！！！ 🎉</h1>
+                    <span id="modalClose" class="modalClose" onclick="modalClose(5)">×</span>
+                </div>
+                <div class="modal-body">
+                    <p>よく頑張ったね！！ お疲れ様！！</p>
+                    <p>キミならできると信じてた！！</p>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
