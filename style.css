@@ -1,8 +1,8 @@
 body{
     background-image: auto;
-    background-size: cover;               /* 全画面 */
-   background-attachment: fixed;         /* 固定 */
-   background-position: center center;   /* 縦横中央 */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 h1 {
@@ -95,7 +95,7 @@ select{
 
 .level1{
     margin-top: auto;
-    font-size: 30px;
+    font-size: 200%;
     height: 50px;
     margin-right: 3.5%;
     margin-left: 3.5%;
