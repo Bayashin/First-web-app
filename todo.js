@@ -1,4 +1,4 @@
-var Todo,Level,Limit_d,Limit_t;
+var Things,Level,Limit_d,Limit_t;
 var num=0;
 $(function() {
     $("#decision").click(make_list);
@@ -6,7 +6,7 @@ $(function() {
     $("#complete").click(complete_list);
 
     function get_document(){
-        Todo=document.getElementById("todo");
+        Things=document.getElementById("things");
         Limit_d=document.getElementById("limit");
         Limit_t=document.getElementById("limit_time");
         Level=document.getElementById("level");
@@ -15,13 +15,13 @@ $(function() {
     function make_list(){
         get_document();
         num++;
-        $("#list_frame").append("<div class='level"+Level.value+"' id='list"+num+"'><span class='list_todo'>"+Todo.value+"</span>"+Limit_d.value+"/"+Limit_t.value+"<button id='complete' class='complete' onclick='complete_list("+num+","+Level.value+")'>完了</button></div>");
+        $("#list_frame").append("<div class='level"+Level.value+"' id='list"+num+"'><span class='list_todo'>"+Things.value+"</span>"+Limit_d.value+"/"+Limit_t.value+"<button id='complete' class='complete' onclick='complete_list("+num+","+Level.value+")'>完了</button></div>");
         cancel_input();
     }
 
     function cancel_input(){
         get_document();
-        Todo.value=''; Limit_d.value=''; Limit_t.value=''; Level.value=1;
+        Things.value=''; Limit_d.value=''; Limit_t.value=''; Level.value=1;
     }
 });
 
